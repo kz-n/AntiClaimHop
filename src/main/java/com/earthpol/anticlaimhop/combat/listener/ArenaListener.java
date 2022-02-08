@@ -1,6 +1,5 @@
 package com.earthpol.anticlaimhop.combat.listener;
 
-import com.gmail.goosius.siegewar.SiegeController;
 import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.object.TownBlock;
 import com.palmergames.bukkit.towny.object.TownBlockType;
@@ -24,7 +23,7 @@ public class ArenaListener implements Listener {
         if(townBlock == null || townBlock.getType() != TownBlockType.ARENA)
             return;
 
-        if(!townBlock.hasTown() || SiegeController.hasSiege(TownyAPI.getInstance().getTown(player.getLocation())))
+        if(!townBlock.hasTown())
             return;
 
         ItemStack item = event.getItem();

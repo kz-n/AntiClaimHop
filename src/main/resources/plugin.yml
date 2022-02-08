@@ -4,7 +4,6 @@ main: com.earthpol.anticlaimhop.Main
 api-version: 1.17
 depend:
   - Towny
-  - SiegeWar
 authors: [ TheCuriousMiner ]
 description: This plugin is EarthPol's Combat Tagging and Anti-Claim Hopping System.
 website: https://earthpol.com

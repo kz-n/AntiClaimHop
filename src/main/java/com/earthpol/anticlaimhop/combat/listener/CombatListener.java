@@ -2,7 +2,6 @@ package com.earthpol.anticlaimhop.combat.listener;
 
 import com.earthpol.anticlaimhop.combat.CombatHandler;
 import com.earthpol.anticlaimhop.combat.bossbar.BossBarTask;
-import com.gmail.goosius.siegewar.SiegeController;
 import com.google.common.collect.ImmutableSet;
 import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.event.damage.TownyPlayerDamagePlayerEvent;
@@ -88,7 +87,7 @@ public class CombatListener implements Listener {
             CombatHandler.removeTag(player);
 
             TownBlock townBlock = TownyAPI.getInstance().getTownBlock(player.getLocation());
-            if(townBlock != null && townBlock.getType() == TownBlockType.ARENA && townBlock.hasTown() && !SiegeController.hasSiege(TownyAPI.getInstance().getTown(player.getLocation())))
+            if(townBlock != null && townBlock.getType() == TownBlockType.ARENA && townBlock.hasTown())
                 return;
 
             deathsForLoggingOut.add(player.getUniqueId());
