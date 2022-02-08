@@ -1,0 +1,16 @@
+name: AntiClaimHop
+version: '${project.version}'
+main: com.earthpol.anticlaimhop.Main
+api-version: 1.17
+depend:
+  - Towny
+  - SiegeWar
+authors: [ TheCuriousMiner ]
+description: This plugin is EarthPol's Combat Tagging and Anti-Claim Hopping System.
+website: https://earthpol.com
+commands:
+  combattag:
+    description: Assists admins in tagging and untagging users.
+    permission: earthpol.command.combattag
+    permission-message: You do not have permission to run this command!
+    usage: /combattag help
