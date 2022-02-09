@@ -34,7 +34,7 @@ import java.util.UUID;
 
 public class CombatListener implements Listener {
 
-        private Set<UUID> deathsForLoggingOut = new HashSet<>();
+        private final Set<UUID> deathsForLoggingOut = new HashSet<>();
 
         @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
         public void onDamage(EntityDamageByEntityEvent event) {
@@ -48,7 +48,7 @@ public class CombatListener implements Listener {
                 damager = (Player) event.getDamager();
             } else if (event.getDamager() instanceof Projectile) {
                 ProjectileSource shooter = ((Projectile) event.getDamager()).getShooter();
-                if (shooter == null || !(shooter instanceof Player))
+                if (!(shooter instanceof Player))
                     return;
 
                 damager = (Player) shooter;

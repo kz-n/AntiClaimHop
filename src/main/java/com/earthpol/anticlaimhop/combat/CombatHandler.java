@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
         public static final long TAG_TIME = 45 * 1000;
 
-        private static Map<UUID, Long> combatTags = new ConcurrentHashMap<>();
+        private static final Map<UUID, Long> combatTags = new ConcurrentHashMap<>();
 
         static {
             new BukkitRunnable() {
